@@ -12,8 +12,8 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="list" action="list">Lista de transportes</g:link></li>
+				<li><g:link class="create" action="create">Registrar nuevo transporte</g:link></li>
 			</ul>
 		</div>
 		<div id="show-transporte" class="content scaffold-show" role="main">
@@ -85,34 +85,6 @@
 					
 				</li>
 				</g:if>
-			
-				<g:if test="${transporteInstance?.usuarioCreacion}">
-				<li class="fieldcontain">
-					<span id="usuarioCreacion-label" class="property-label"><g:message code="transporte.usuarioCreacion.label" default="Usuario Creacion" /></span>
-					
-						<span class="property-value" aria-labelledby="usuarioCreacion-label"><g:fieldValue bean="${transporteInstance}" field="usuarioCreacion"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${transporteInstance?.fechaModificacion}">
-				<li class="fieldcontain">
-					<span id="fechaModificacion-label" class="property-label"><g:message code="transporte.fechaModificacion.label" default="Fecha Modificacion" /></span>
-					
-						<span class="property-value" aria-labelledby="fechaModificacion-label"><g:formatDate date="${transporteInstance?.fechaModificacion}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${transporteInstance?.usuarioModificacion}">
-				<li class="fieldcontain">
-					<span id="usuarioModificacion-label" class="property-label"><g:message code="transporte.usuarioModificacion.label" default="Usuario Modificacion" /></span>
-					
-						<span class="property-value" aria-labelledby="usuarioModificacion-label"><g:fieldValue bean="${transporteInstance}" field="usuarioModificacion"/></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

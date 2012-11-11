@@ -44,9 +44,9 @@
 					
 						<td><g:link action="show" id="${transporteInstance.id}">${fieldValue(bean: transporteInstance, field: "usuario")}</g:link></td>
 					
-						<td>${fieldValue(bean: transporteInstance, field: "origen")}</td>
+						<td>${transporteInstance.origen.getKey()}</td>
 					
-						<td>${fieldValue(bean: transporteInstance, field: "destino")}</td>
+						<td>${transporteInstance.destino.getKey()}</td>
 					
 						<td><g:formatDate date="${transporteInstance.fechaSalida}" /></td>
 					

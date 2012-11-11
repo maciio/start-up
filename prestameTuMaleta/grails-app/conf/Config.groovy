@@ -64,6 +64,8 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.lang = "es"
+        grails.country = "MX"
     }
     production {
         grails.logging.jul.usebridge = false
@@ -84,8 +86,8 @@ log4j = {
                 file: "${logDirectory}/maleta.log",
                 layout: logLayoutPattern
     }
-    debug rollingFile:
-            [ 'mx.com.montepresta', 'grails.app.controller',
+    debug stdout:
+            [ 'mx.com.maleta', 'grails.app.controller',
                     'grails.app.domain', 'grails.app.service']
     error stdout:
             'org.codehaus.groovy.grails.web.servlet',        // controllers

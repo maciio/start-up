@@ -12,7 +12,9 @@ class TransporteController {
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        [transporteInstanceList: Transporte.list(params), transporteInstanceTotal: Transporte.count()]
+        def lista = Transporte.list()
+        def total = Transporte.count()
+        [transporteInstanceList: lista , transporteInstanceTotal: total]
     }
 
     def create() {
