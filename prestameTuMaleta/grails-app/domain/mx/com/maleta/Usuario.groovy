@@ -1,6 +1,9 @@
 package mx.com.maleta
 
 class Usuario {
+
+    public static final USUARIO_DEFAULT = "admin"
+
     String nombre
     String apellidoPaterno
     String apellidoMaterno
@@ -8,12 +11,12 @@ class Usuario {
     String estado
     String callePrincipal
     String callesSecundarias
-    Integer numeroExterior
-    Integer codigoPostal
-    Integer numeroCelular
+    Long numeroExterior
+    Long codigoPostal
+    Long numeroCelular
     String link
     Date fechaCreacion = new Date();
-    String usuarioCreacion = "DEFAULT" //TODO
+    String usuarioCreacion = USUARIO_DEFAULT //TODO
     Date fechaModificacion
     String usuarioModificacion
 
@@ -33,5 +36,9 @@ class Usuario {
         usuarioCreacion(display:false)
         fechaModificacion nullable: true, display: false
         usuarioModificacion nullable: true, display: false
+    }
+    
+    String toString() {
+        nombre + apellidoPaterno
     }
 }

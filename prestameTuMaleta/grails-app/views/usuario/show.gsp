@@ -21,7 +21,7 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<ol class="property-list usuario">
+			<ol class="property-list">
 			
 				<g:if test="${usuarioInstance?.nombre}">
 				<li class="fieldcontain">
